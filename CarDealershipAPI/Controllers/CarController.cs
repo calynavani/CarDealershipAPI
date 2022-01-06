@@ -16,8 +16,12 @@ namespace CarDealershipAPI.Controllers
             new Car("GMC", "Denali 2500", 2021, "black"),
             new Car("Pontiac", "G6 Coupe", 2006, "grey"),
             new Car("VolksWagen", "Beetle", 2007, "yellow"),
-            new Car("Cadillac", "El Dorado", 1985, "black"),
-            new Car("Lincoln", "Continental", 1985, "red"),
+            new Car("Cadillac", "Escalade", 2022, "black"),
+            new Car("Lincoln", "Navigator", 2022, "red"),
+            new Car("Tesla", "Model S", 2022, "white"),
+            new Car("Tesla", "Model X", 2020, "grey"),
+            new Car("Lamborghini", "Urus", 2021, "yellow"),
+            new Car("Mercedes-Benz", "G Class", 2022, "white"),
         };
 
         [HttpGet]
@@ -38,7 +42,7 @@ namespace CarDealershipAPI.Controllers
                 return null;
             }
         }
-        [HttpGet("GetCarColor/{color}")]
+        [HttpGet("CarColor/{color}")]
         public List<Car> GetCarByColor(string color)
         {          
             try
@@ -50,7 +54,7 @@ namespace CarDealershipAPI.Controllers
                 return null;
             }
         }
-        [HttpGet("GetCarMake/{make}")]
+        [HttpGet("CarMake/{make}")]
         public List<Car> GetCarByMake(string make)
         {
             try
